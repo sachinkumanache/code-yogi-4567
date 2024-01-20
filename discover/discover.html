@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discover</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/08d390c7c0.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .card-title {
+        color: #602222;
+      }
+      /* footer  */
+      .footer {
+        height: auto;
+        width: 100%;
+        background-color: #3ea8ff;
+      }
+      .title {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+      }
+      .title > h3 {
+        color: white;
+        font-weight: bold;
+      }
+
+      .ipt-btn {
+        display: flex;
+        justify-content: center;
+      }
+      #EInput {
+        /* padding: 20px; */
+        margin: 20px;
+        width: 400px;
+        height: 60px;
+        border-radius: 20px;
+        border: none;
+        padding: 10px;
+        font-weight: bold;
+        color: #004d8c;
+      }
+      .sbtn {
+        height: 60px;
+        width: 170px;
+        margin: 20px;
+        border-radius: 20px;
+        color: #3ea8ff;
+        border: none;
+        font-size: 20px;
+        font-weight: bold;
+        background-color: white;
+      }
+
+      .sbtn:hover {
+        background-color: rgb(255, 20, 20);
+        color: white;
+        border: 2px solid black;
+      }
+
+      .main-boxF {
+        /* height: 500px; */
+        display: grid;
+
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 40px;
+        color: white;
+      }
+      .boxF {
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        width: 260px;
+        height: auto;
+      }
+      .media {
+        display: flex;
+        justify-content: center;
+        color: white;
+        font-size: 30px;
+      }
+      /* ------------- */
+      .img {
+        text-align: center;
+        /* margin-top: -40px; */
+      }
+      .location {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        /* align-items: baseline; */
+        font-weight: bold;
+        /* padding: 20px; */
+      }
+      .call {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        font-weight: bold;
+        /* padding: 20px; */
+      }
+      .gmail {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        font-weight: bold;
+        /* padding: 20px; */
+      }
+      .boxF > span {
+        font-weight: bold;
+        margin: 10px;
+      }
+      .ul {
+        text-align: center;
+      }
+      .ul > ul > li {
+        list-style: none;
+      }
+      /* ----------------------- */
+      @media screen and (max-width: 750px) {
+        .footer {
+          height: auto;
+        }
+        .main-boxF {
+          /* height: 500px; */
+          display: grid;
+          /* margin-top: -0px; */
+          grid-template-columns: repeat(2, 1fr);
+          /* border: 1px solid red; */
+          gap: 20px;
+          /* display: flex;
+        flex-wrap: wrap; */
+          padding: 0px 50px 0px 50px;
+        }
+        .ipt-btn {
+          display: flex;
+          /* flex-direction: column; */
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      }
+      /* ------------ */
+      @media screen and (max-width: 500px) {
+        .main-boxF {
+          /* height: 500px; */
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          gap: 20px;
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .footer {
+          height: auto;
+        }
+        .ipt-btn {
+          display: flex;
+          /* flex-direction: column; */
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="box"
+      class="container d-flex gap-5 flex-wrap justify-content-center flex-row"
+    ></div>
+    <!-- footer  -->
+    <div class="footer">
+      <div class="title">
+        <h3>Subscribe Our Newsletter</h3>
+      </div>
+
+      <div class="ipt-btn">
+        <input type="text" id="EInput" placeholder="Enter your Email ID" />
+        <button class="sbtn">Subscribe</button>
+      </div>
+
+      <div class="main-boxF">
+        <div class="boxF">
+          <div class="img">
+            <img
+              src="../fw28_310/img/t logo.png"
+              style="height: 180px"
+              alt="logo"
+            />
+          </div>
+          <div class="location">
+            <p style="margin-left: -40px">
+              <i class="fa-solid fa-location-dot" style="margin-right: 20px"></i
+              >Bengaluru,India
+            </p>
+          </div>
+          <br />
+          <div class="call">
+            <p style="margin-left: -80px">
+              <i class="fa-solid fa-phone" style="margin-right: 10px"></i>
+              9987 7645
+            </p>
+          </div>
+          <br />
+          <div class="gmail">
+            <p style="margin-left: 15px">
+              <i class="fa-solid fa-envelope" style="margin-right: 10px"></i>
+              travellers1@gmail.com
+            </p>
+          </div>
+        </div>
+        <div class="boxF">
+          <div class="ul">
+            <ul>
+              <br />
+              <li>
+                <b>MY ACCOUNT</b>
+              </li>
+              <br />
+              <li>Search Term</li>
+              <br />
+              <li>Advanced Search</li>
+              <br />
+              <li>Orders & Returns</li>
+              <br />
+              <li>Helps & FAQ</li>
+              <br />
+              <li>Stone Locations</li>
+            </ul>
+          </div>
+        </div>
+        <div class="boxF">
+          <div class="ul">
+            <ul>
+              <br />
+              <li>
+                <b>INFORMATION</b>
+              </li>
+              <br />
+              <li>News</li>
+              <br />
+              <li>FAQ</li>
+              <br />
+              <li>Refund & Returns</li>
+              <br />
+              <li>Delivery</li>
+              <br />
+              <li>Privacy Policy</li>
+            </ul>
+          </div>
+        </div>
+        <div class="boxF">
+          <div class="ul">
+            <ul>
+              <br />
+              <li>
+                <b>INFORMATION</b>
+              </li>
+              <br />
+              <li>Rock Climbing Gears</li>
+              <br />
+              <li>Solar Power Helmet</li>
+              <br />
+              <li>Pull Rope Rubber</li>
+              <br />
+              <li>Pairing Knief</li>
+              <br />
+              <li>Ladder Golf</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <div
+        class="hr"
+        style="
+          height: 4px;
+          width: 90%;
+          margin: auto;
+          background-color: rgb(229, 229, 229);
+        "
+      ></div>
+      <br />
+      <div class="media">
+        <span style="color: white">
+          follow us on
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+        </span>
+        <br /><br />
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  let res = fetch("https://mock-api-template-y00o.onrender.com/locations");
+  res
+    .then((res) => {
+      // console.log(res);
+      return res.json();
+    })
+    .then((data) => {
+      // console.log(data);
+      appendcards(data);
+    });
+
+  function appendcards(locations) {
+    // Get the container element
+    let container = document.getElementById("box");
+
+    // Loop through each location in the array
+    locations.forEach((location, index) => {
+      // Create a card element
+      let card = document.createElement("div");
+      card.className = "card";
+      card.style.width = "18rem";
+      // card.style.borderColor = "red";
+      card.style.boxShadow = "rgba(0, 0, 0, 0.16) 0px 1px 4px";
+      card.addEventListener("click", () => {
+        localStorage.setItem("location", JSON.stringify(location));
+        // window.location.href = "/detailed.html";
+        // console.log(location);
+      });
+
+      // Create a carousel container
+      let carouselContainer = document.createElement("div");
+      let carouselId = "carouselExampleIndicators" + index;
+      carouselContainer.id = carouselId;
+      carouselContainer.className = "carousel slide";
+
+      // Create carousel indicators container
+      let indicatorsContainer = document.createElement("div");
+      indicatorsContainer.className = "carousel-indicators";
+
+      // Create carousel items container
+      let itemsContainer = document.createElement("div");
+      itemsContainer.className = "carousel-inner";
+
+      // Loop through each image in the location
+      location.images.forEach((image, j) => {
+        // Create carousel indicator button
+        let indicatorButton = document.createElement("button");
+        indicatorButton.type = "button";
+        indicatorButton.setAttribute("data-bs-target", `#${carouselId}`);
+        indicatorButton.setAttribute("data-bs-slide-to", j.toString());
+        indicatorButton.setAttribute("aria-label", `Slide ${j + 1}`);
+
+        // Set indicator button classes
+        if (j === 0) {
+          indicatorButton.className = "active";
+          indicatorButton.setAttribute("aria-current", "true");
+        }
+
+        // Append indicator button to indicators container
+        indicatorsContainer.appendChild(indicatorButton);
+
+        // Create carousel item
+        let carouselItem = document.createElement("div");
+        carouselItem.className =
+          j === 0 ? "carousel-item active" : "carousel-item";
+
+        // Create image element
+        let imageElement = document.createElement("img");
+        imageElement.src = image;
+        imageElement.className = "d-block w-100";
+        imageElement.alt = "Slide " + (j + 1);
+        imageElement.style.height = "200px";
+
+        // Append image to carousel item
+        carouselItem.appendChild(imageElement);
+
+        // Append carousel item to items container
+        itemsContainer.appendChild(carouselItem);
+      });
+
+      // Create carousel control buttons
+      let prevButton = document.createElement("button");
+      let nextButton = document.createElement("button");
+
+      // Set attributes for previous button
+      prevButton.className = "carousel-control-prev";
+      prevButton.type = "button";
+      prevButton.setAttribute("data-bs-target", `#${carouselId}`);
+      prevButton.setAttribute("data-bs-slide", "prev");
+
+      // Set attributes for next button
+      nextButton.className = "carousel-control-next";
+      nextButton.type = "button";
+      nextButton.setAttribute("data-bs-target", `#${carouselId}`);
+      nextButton.setAttribute("data-bs-slide", "next");
+
+      // Create card body
+      let cardBody = document.createElement("div");
+      cardBody.className = "card-body";
+
+      // Create card title
+      let cardTitle = document.createElement("h5");
+      cardTitle.className = "card-title";
+      cardTitle.textContent = location.name;
+      card;
+      // Create card text
+      let cardText = document.createElement("p");
+      cardText.className = "card-text";
+      // cardText.textContent = `Distance: ${location.distance}`;
+      cardText.innerHTML = `
+      ${location.distance} <br>
+     ${location.availability.start_date} to ${location.availability.end_date} <br>
+     <strong> ₹${location.price_per_night} </strong>   <strong>night</strong>
+     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <strong class="rating"><i class="fa-regular fa-star"></i> ${location.rating}</strong> `;
+      // Append card title and text to card body
+      cardBody.appendChild(cardTitle);
+      cardBody.appendChild(cardText);
+
+      // Append indicators, items, and control buttons to carousel container
+      carouselContainer.appendChild(indicatorsContainer);
+      carouselContainer.appendChild(itemsContainer);
+      carouselContainer.appendChild(prevButton);
+      carouselContainer.appendChild(nextButton);
+
+      // Append carousel container and card body to card
+      card.appendChild(carouselContainer);
+      card.appendChild(cardBody);
+
+      // Append card to container
+      container.appendChild(card);
+    });
+  }
+</script>
