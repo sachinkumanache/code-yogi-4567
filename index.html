@@ -1,91 +1,512 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="shortcut icon" href="favicon.jpeg" type="image/x-icon">
+  <title>Travel & Tour</title>
+  <style>
+.home{
+  width: 100%;
+    height: 100vh;
+    background-image: url("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.logo-name {
+  font-family: 'Your Font Here', sans-serif; /* Replace 'Your Font Here' with the desired font family */
+  font-size: 24px; /* Adjust the font size as needed */
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff; /* Set the text color */
+  /* Add additional styles as needed */
+}
+/* #logo-main{
+  width: 20%;
+  height: 12%;
+} */
 
-    <title>Travel & Tour</title>
+.logo-name:hover {
+  color: rgb(185, 190, 178); /* Change the color on hover if desired */
+  /* Add additional hover styles as needed */
+}
+#nav-color{
+    color: white;
+}
+.site-name{
+    list-style: none;
+    color: white;
+}
+.navbar {
+   
+    background-color: transparent !important;
+    background-image: none !important;
+  }
+  
+  .navbar-toggler-icon {
+    color: white; 
+    border-radius: 5px;
+    background-color: #ba8080;
+  }
+  
+  .navbar-nav,
+  .navbar-nav li,
+  .navbar-nav a {
+   color: rgb(242, 222, 222); 
+    background-color: transparent !important; 
+ }
+ .navbar-nav a:hover{
+  color:rgb(185, 190, 178);
+  transform: scale(1.06);
+ }
+  .hr{
+    width: 94%;
+    height: 1px;
+    border: 1px solid rgb(243, 175, 175);
+    margin: auto;
+    flex-shrink: 0;
+    opacity: 0.4;
+   position: sticky;
+   top: 58px;
+  }
+  #search{
+    margin-top: 8px;
+    color: white;
+    margin-left: 100px;
+    margin-right:-159px;
+  }
+  #search span{
+    font-size: 28px;
+  }
+  #profile{
+    margin-top: 8px;
+    color: white;
+    margin-left:59px;
+  }
+  #profile span{
+    font-size: 28px;
+  }
+  .sign-up:hover{
+    transform: rotate(360deg) scale(1.2);
+    /* background-color: aquamarine; */
+    transition: transform 1s ease;
+  
+  }
+.mid-section{
+    display: flex;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+  .mid-left{
+    color: white;
+    margin-top: 50px;
+    text-align: center;
+    padding-left:48px
+  }
+  .mid-selections{
+    margin-top: 30px;
+    padding: 10px;
+    padding-left: 17px;
+    padding-right: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-radius: 12px;
+    justify-content: center;
+    background-color: #6c757d;
+    background-color: rgb(108, 117, 125, 0.5);
+  }
+
+  .mid-selections select{
+    padding-right: 40px;
+    padding-left: 10px;
+    border-color: rgb(255, 255, 255);
+    color: white;
+    border-radius: 12px;
+    background-color: rgb(108, 117, 125, 0.5);
+    background-color: #6c757d;
+  }
+  #mid-date{
+    padding-right: 40px;
+    padding-left: 10px;
+    border-radius: 12px;
+    border-color: white;
+    color: white;
+    background-color: rgb(108, 117, 125, 0.5);
+    background-color: #6c757d;
+  }
+
+  .discount{
+    margin-top: 50px;
+  }
+
+  .discount>div{
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+  }
+  .discount>div>span{
+  color: rgb(43, 43, 235);
+  }
+  #timer{
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  font-weight: bolder;
+  color: #ffffff;
+
+  } 
+  .mid-right i{
+    font-size: 30px;
+    color: white;
+  }
+  .mid-right i:hover{
+    color:rgb(185, 190, 178);
+    transform: scale(1.3);
+  }
+  .mid-right{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 36px 0 0 36px; 
+    gap: 20px;
+    width: 60px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    /* transform: translateX(50%); */
+    right: 0;
+    top: 10px; 
+    overflow: hidden;
+  }
+  .hr2{
+    width:30px;
+    height: 1px;
+    border: 1px solid rgb(243, 175, 175);
+    flex-shrink: 0;
+    opacity: 0.4;
+  }
+  .bottem-section-blur{
+    /* I want this divs background to be blured */
+    width: 100%;
+    /* height: 100%; */
+    position: relative;
+    margin-top: 6%;
+    color: white;
+    /* background-image: url("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"); */
+    filter: blur(25px);
+    background-position: bottom bottom;
+  }
+.btn-main{
+  background-color: rgba(255, 255, 255, 0.167);
+  color: #ffffff;
+  border-radius: 0 8px 8px 0;
+  border: 1px 0.7;
+  padding-bottom:4px ;
+}
+.input-main{
+  background-color: rgba(255, 255, 255, 0.17);
+  color: #ffffff;
+  padding-left: 5px;
+  margin-left: -100px;
+}
+
+
+@media only screen and (max-width: 375px) {
+  
+  .mid-section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    /* flex-wrap: wrap; */
+    /* justify-content: space-evenly; */
+    position: relative;
+}
+
+  .mid-selections{
+    margin-top: 20px;
+    /* padding: 10px; */
+    /* padding-left: 17px; */
+    /* padding-right: 18px; */
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    gap: 11px;
+    border-radius: 12px;
+    /* justify-content: center; */
+    background-color: rgb(108, 117, 125, 0.5);
+    backdrop-filter: blur(.5px);
+  }
+  .mid-selections select{
+    padding-right: 40px;
+    padding-left: 10px;
+    border-color: rgb(255, 255, 255);
+    color: white;
+    border-radius: 12px;
+    background-color: rgb(108, 117, 125, 0.5);
+    /* backdrop-filter: blur(.5px); */
+  }
+  #mid-date{
+    padding-right: 40px;
+    padding-left: 10px;
+    border-radius: 12px;
+    border-color: white;
+    color: white;
+    background-color: rgb(108, 117, 125, 0.5);
+    /* backdrop-filter: blur(.5px); */
+  }
+.heading{
+  font-size: large;
+}
+  .mid-left{
+    color: white;
+    margin-top: 5px;
+    text-align: center;
+    /* margin-left:9px; */
+    padding: 0 40px 0 40px; 
+  }
+  .discount{
+    margin-top: 15px;
+
+  }
+  .discount>div{
+    justify-content: center;
+    display: flex;
+    gap: 3px;
+  }
+  .discount>p{
+   margin-top: -10px;
+  }
+  .mid-right{
+    display: flex;    
+    width: 100%;
+    border: 1px solid;
+    height: 60px;
+    position: relative;  
+  }
+  .mid-right div{
+    width: 40px;
+    height: 30px;
+    border: 1px solid gold;
+  }
+  .mid-right i{
+    font-size: 30px;
+    color: white;
+  }
+  .mid-right i:hover{
+    color:rgb(185, 190, 178);
+    transform: scale(1.3);
+  }
+
+  .hr2{
+    /* width:1px;
+    height: 1px;
+    border: 1px solid rgb(243, 175, 175);
+    /* flex-shrink: 0; */
+    /* opacity: 0.4; */ 
+    display: none;
+  }
+
+}
+  </style>
 </head>
-<body>
-    <!-- Bhawesh  { -->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Travel & Tour</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Discover</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Loaction</a></li>
-                      <li><a class="dropdown-item" href="#">About Us</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                  </li>
-                </ul>
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-              </div>
-            </div>
-          </nav>
 
-          <!-- or  -->
-          <div class="position-s sticky-top">
-            <nav class="navbar navbar-expand-lg bg-body-tertiary ">
-                <div class="container-fluid mx-5">
-                    <img class="akash-logo" src="/web-dev-ratna-8765/assets/Screenshot 2024-01-16 135039.png" alt="">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto me-auto  mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link fw-bold mx-3" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link fw-bold mx-3" href="#">About Us</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle fw-bold mx-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          product
-                        </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item d-flex" href="#">Merchants <span class="material-symbols-outlined">
-                                        chevron_right
-                                        </span></a></li>
-                                    <li><a class="dropdown-item d-flex " href="#">Consumer <span class="material-symbols-outlined">
-                                        chevron_right
-                                        </span></a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link fw-bold" aria-disabled="true">Contact Us</a>
-                            </li>
-                        </ul>
-                        <form>
-                            <button class="btn btn-outline-primary d-flex" type="submit">Login <span class="material-symbols-outlined">
-                                person
-                                </span></button>
-                        </form>
-                    </div>
-                </div>
-            </nav>
+<body>
+  <div class="home">
+
+    <div class="nav-color position-s sticky-top">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+        <div class="container-fluid mx-5">
+          <li class="site-name">
+            <a class="logo-name  nav-link fw-bold mx-3" href="#">Travel & Tour</a>
+          </li>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto me-auto  mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link fw-bold mx-3" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold mx-3" href="discover/discover.html">Discover</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle fw-bold mx-3" href="location/location.html" role="button">
+                  Location
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="aboutUs/index.html" aria-disabled="true">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="aboutUs/index.html" aria-disabled="true">Support</a>
+              </li>
+              <li id="search" class="nav-item">
+                <a id="search-icon" href="#"><span class="material-symbols-outlined">
+                    search
+                  </span></a>
+              </li>
+              <li id="profile" class="nav-item">
+                <a href="#"> <span class="material-symbols-outlined">
+                    person
+                  </span></a>
+              </li>
+            </ul>
+            <form>
+              <div id="" style="display: flex;">
+                <button id="sign-up" class="text-info bg-dark 
+              btn btn-outline-primary d-flex" type="submit"><span class="sign-up">
+                    Sign up
+                  </span></button>
+              </div>
+            </form>
+          </div>
         </div>
-    <!-- }  Bhawesh -->
+      </nav>
+    </div>
+
+    <div class="hr"></div>
+
+    <div class="mid-section">
+      <div class="mid-left">
+        <h1 class="heading">
+          FEEL THE REAL BEAUTY OF NATURE
+        </h1>
+        <div class="mid-selections">
+          <select id="destination" name="Location">
+            <option value="" disabled selected>Destination</option>
+            <option value="blue">Hills</option>
+            <option value="green">Beaches</option>
+            <option value="yellow">Cities</option>
+          </select>
+
+          <label for="date">Check-in Check-out</label>
+          <input type="date" id="mid-date" name="date"  placeholder="Choose a date">
+
+          <select  id="destination" name="Location">
+            <option value="" disabled selected>Adults</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="more the five">5<</option>
+          </select>
+        </div>
+        <div class="discount">
+          <div>
+            <span class="material-symbols-outlined">
+              timelapse
+            </span>
+            <p>Discount on new bookings</p>
+          </div>
+          <p id="timer">
+            <!-- JS code -->
+          </p>
+        </div>
+      </div>
+
+      <div class="mid-right">
+        <div>
+          <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        </div>
+        <div class="hr2"></div>
+        <div>
+          <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="hr2"></div>
+        <div>
+          <a href="https://twitter.com/?lang=en" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="bottem-section-blur">
+      <div class="bottem-section">
+        
+      </div>
+    </div>
+
+
+  </div>
 </body>
+
 </html>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/1c0f44dfe7.js" crossorigin="anonymous"></script>
+<script>
+  let x = localStorage.getItem("email")||"";
+if(x != ""){
+let signbtn = document.getElementById("sign-up");
+signbtn.style.display = "none";
+}
+
+const targetDate = new Date();
+targetDate.setHours(targetDate.getHours() + 5); // Example: 5 hours from now
+
+// Function to update the timer display
+function updateTimer() {
+  const now = new Date();
+  const timeDifference = targetDate - now;
+
+  if (timeDifference <= 0) {
+    document.getElementById('timer').textContent = "00h 00min 00sec";
+  } else {
+    const hours = Math.floor(timeDifference / (1000 * 60 * 60));
+    const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+    // Format the time and update the display
+    const formattedTime = `${String(hours).padStart(2, '0')}h ${String(minutes).padStart(2, '0')}min ${String(seconds).padStart(2, '0')}sec`;
+    document.getElementById('timer').textContent = formattedTime;
+  }
+}
+
+// Update the timer every second
+setInterval(updateTimer, 1000);
+
+// Initial update when the page loads
+updateTimer();
+
+let profile = document.getElementById("profile");
+let search = document.getElementById("search");
+let searchIcon = document.getElementById("search-icon");
+searchIcon.addEventListener("click",()=>{
+    search.innerHTML="";
+    let input = document.createElement("input");
+    let btn = document.createElement("button");
+    btn.innerText= "Search";
+    btn.className = "btn-main";
+    // btn.className = "text-info bg-dark btn btn-outline-primary d-flex";
+    // input.className("input-main")
+    input.className = "input-main";
+    input.setAttribute("placeholder", " Enter : Location");
+    search.append(input,btn);
+    searchIcon.style.display="none"
+    profile.style.opacity="0";
+}
+)
+
+let signUp = document.getElementById("sign-up");
+signUp.addEventListener("click",()=>{
+    window.open("sign-in-up/sign-up.html");
+})
+
+</script>

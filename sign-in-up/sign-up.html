@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignUp Page</title>
+    <style>
+* {
+  box-sizing: border-box;
+}
+body {
+  background-image: url("https://iadsb.tmgrup.com.tr/e2a79f/1200/627/0/59/1000/580?u=https://idsb.tmgrup.com.tr/2019/09/27/1569603776449.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+  background-size: 100% 100%;
+}
+div {
+  /* border: 1px solid; */
+  margin: auto;
+  text-align: center;
+}
+div > img {
+  width:10%
+}
+form {
+  width: 30%;
+  /* height: 400px; */
+  /* border: 1px solid; */
+  margin: auto;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: rgba(255, 255, 255, 0.5); 
+  backdrop-filter: blur(1px); 
+  border-radius: 2%;
+}
+input {
+  padding: 10px;
+  width: 90%;
+  margin: 10px 0px;
+  border-color: rgb(236, 230, 230);
+}
+a {
+  color: rgb(40, 40, 238);
+}
+p,
+h1 {
+  text-align: center;
+  width: 90%;
+}
+p > span {
+  color: rgb(104, 9, 182);
+}
+    </style>
+
+
+</head>
+  <body>
+    <div id="logo">
+      <img src="logo-main.png" alt="site-logo" />
+    </div>
+    <form action="" id="signupform">
+      <h1>signup</h1>
+      <label for="name">Full name</label>
+      <br />
+      <input
+        type="text"
+        id="name"
+        placeholder="Enter your full name"
+        required
+      />
+      <br />
+      <label for="email">Email</label>
+      <br />
+      <input type="email" id="email" placeholder="Enter email" required />
+      <br />
+      <label for="Password">Password</label>
+      <br />
+      <input
+        type="password"
+        id="password"
+        placeholder="Enter password"
+        required
+      />
+      <br />
+      <p>
+        by signing up I accept the <span>Travel & Tour /span>
+        <a href="">Terms of service</a> and acnowledge the
+        <a href="">Privacy policy</a>
+      </p>
+      <input type="submit" placeholder="signup" />
+      <p>Alredy have and account ? <a href="sign-in.html">sign in</a></p>
+    </form>
+  </body>
+</html>
+<script>
+    let logo = document.getElementById("logo");
+    logo.addEventListener("click",()=>{
+        window.open("index.html");
+    })
+document.querySelector("#signupform").addEventListener("submit", formfunc);
+function formfunc(event) {
+  event.preventDefault();
+  let name = document.querySelector("#name").value;
+  let email = document.querySelector("#email").value;
+  let password = document.querySelector("#password").value;
+  localStorage.setItem("name", name);
+  localStorage.setItem("email", email);
+  localStorage.setItem("password", password);
+  // window.location.href = "signin.html";
+  window.open("sign-in.html");
+}
+</script>
