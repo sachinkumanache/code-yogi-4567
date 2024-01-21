@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./index.css">
+   <link
+   href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+   rel="stylesheet"
+   integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+   crossorigin="anonymous"
+ />
+ <script
+ src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+ integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+ crossorigin="anonymous"
+></script>
+<script
+ src="https://kit.fontawesome.com/08d390c7c0.js"
+ crossorigin="anonymous"
+></script>
+<link
+ rel="stylesheet"
+ href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+/>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<title>Document</title>
+</head>
+<body>
+    
+
+  <!-- navbar -->
+
+  <div class="nav-color position-s sticky-top">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+      <div class="container-fluid mx-5">
+        <li class="site-name">
+          <a class="logo-name  nav-link fw-bold mx-3" href="#">Travel & Tour</a>
+        </li>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto me-auto  mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link fw-bold mx-3" aria-current="page" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold mx-3" href="../discover/discover.html">Discover</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle fw-bold mx-3" href="../location/location.html" role="button">
+                Location
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="../aboutUs/index.html" aria-disabled="true">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="#" aria-disabled="true">Support</a>
+            </li>
+            <li id="search" class="nav-item">
+              <a id="search-icon" href="#"><span class="material-symbols-outlined">
+                  search
+                </span></a>
+            </li>
+            <li id="profile" class="nav-item">
+              <a href="#"> <span class="material-symbols-outlined">
+                  person
+                </span></a>
+            </li>
+          </ul>
+          <form>
+            <!-- <div id="" style="display: flex;">
+              <button id="sign-up" class="text-info bg-dark 
+            btn btn-outline-primary d-flex" type="submit"><span class="sign-up">
+                  Sign up
+                </span></button>
+            </div> -->
+          </form>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="hr"></div>
+    <!-- con1 -->
+    <div class="con1">
+      <div class="h1">
+        <h2 style="color: white;">Customer Service</h2>
+    </div>
+      <div class="input">
+        <input type="text" placeholder="Search" id="name">
+        <i class="fa-solid fa-magnifying-glass" style="margin-left: -30px;"></i>
+    </div>
+     
+    </div>
+
+    <!-- con2 -->
+
+    <div class="con2">
+
+        <div class="box1">
+            <h2>Your Virtual Agent is here to help.</h2>
+        </div>
+
+        <div class="mbox2">
+            <div class="box">
+
+               <span style="background-color: white;color: black;"><i class="fa-solid fa-xmark" style="margin: 10px;font-size: 20px;color: red;"></i>Cancel your trip</span>
+            </div>
+            <div class="box">
+              
+                <span style="background-color: white;color: black;">
+                  <i class="fa-solid fa-calendar-days" style="margin: 10px;font-size: 20px;color: red;"></i>
+                  Change your trip</span>
+            </div>
+            <div class="box">
+               
+                <span style="background-color: white;color: black;">
+                  <i class="fa-regular fa-address-card" style="margin: 10px;font-size: 20px;color: red;"></i>
+                  Ask refund</span>
+            </div>
+            <div class="box">
+             
+                <span style="background-color: white;color: black;">
+                  <i class="fa-brands fa-rocketchat" style="margin: 10px;font-size: 20px;color: red;"></i>
+                  Chat Now</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- con-3 -->
+  
+    <div class="con-3">
+        <h2 class="h2-c">Popular Topics</h2>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  <h4 style="color:#9232ff;font-weight: bold;">'Private host' listings</h4> 
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  There are many travel options available on our sites and we want to make your search results as relevant as possible. That’s why we offer lots of ways to help you search for and plan your travel.
+
+                  Our site uses complex, dynamic algorithms to ensure your search results are ordered efficiently.
+                  
+                  On the search results page, you can select how to sort the results we display, and also use filter options to see only those search results that meet your chosen preferences. If you don’t decide to use these features, then you’ll see our chosen default sort order which orders results as follows:
+                  <hr>
+                  <h4>Flights</h4>
+                  Results are ordered lowest to highest price. Where two flights have the same price, the shorter flight is listed first.
+                  Accommodation
+                  Results are ordered starting with the most relevant and competitive offers based on a range of factors, including a property’s offered price compared to its historical prices, its guest rating, number of reviews, number of bookings to date, and location (relative to your destination search).
+                  They are also further differentiated by traveller satisfaction factors, including the range and quality of images and information provided for properties, the number of guest relocations and the number of refunds due to complaints about stays, property availability on our sites, and the overall price competitiveness for our travellers.
+                  In addition, how much we are paid (eg: commissions from accommodation or compensation on bookings) when you book a property and such booking is completed is one of the factors taken into consideration when determining the relative order of properties with similar offers in our search results listings. What we are paid recognises the part we play in listing the property on our site, facilitating the booking and facilitating your stay at the property. Where we are displaying properties with a similar offer, then a booking from which we are paid more commission or compensation will feature higher in our search results listing compared to other properties with similar offers where we are paid less commission or compensation on the booking.
+                  <hr>
+                 <h4>Cars</h4>
+                  Results are ordered by taking into account price and other factors such as the number of bookings of an offer to date, customer review scores, car category/type and pick-up location relative to your arrival location.
+                  <hr>
+                  <h4>Cruises</h4>
+                  Results are ordered by taking into account factors such as cruise line rating, ship rating, price per day, origin rating, destination rating, length of cruise and booking window.
+                  <hr>
+                  <h4>Things to Do</h4>
+                  Results are ordered by taking into account factors such as price, searched-for experiences, location including distance from accommodation options, traveller reviews and local research. In addition, they may also take into account number of bookings to date and compensation we may earn on a booking.
+                  Combined Searches and Vacation Packages
+                  Results are ordered by the criteria outlined above for each individual component.
+                  If you select a specific sort order option such as those prioritising price, deals, guest reviews, property class or rating, distance from centre, etc., the results list will be ordered with a focus on your selected priorities, using the factors described above as they relate to your search. This will also be the case for some pages that showcase offers in a destination or for a style of accommodation, etc.
+                  
+                  If you apply a filter, the results list will be presented using the factors described above as they relate to your search, filtered by the specific feature(s) and amenity(ies) you’ve selected.
+                  
+                  We’re constantly updating our systems and testing new ways to refine your results to make them as relevant as possible to accommodate your needs.</div>
+                      <hr>
+              <h3>Was this topic helpful?</h3>
+<button style="width: 70px;">Yes</button>  <button style="width: 70px;">No</button>
+       <br><br>
+              </div>
+            </div>
+            <!-- con2 -->
+
+            <!-- 2-->
+            
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  <h4 style="color:#9232ff;font-weight: bold;">
+                    Book a flight using an airline credit
+                  </h4> 
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  
+                  If you’ve had to cancel or change your 
+                  non-refundable flight, most airlines will 
+                  offer you a credit instead of a refund. 
+                  Here’s the things you should know. 
+                  <br>
+                  <br>
+<h3>Using your flight credit issued due to COVID-19</h3>
+<br>
+First, you will need to have the itinerary number, credit amount, and traveler name(s) handy to get started. Your flight credit can be used immediately. Currently, the only option to redeem a flight credit for future use, is by calling us. Given the high demand, we are prioritizing work on online solutions. We look forward to providing you an update here soon.  
+<br>
+<br>
+<h3>COVID-19 flight credit rules:</h3>
+<br>
+<ul>
+  <li> The airlines are setting the policies for how you can redeem your airline credit.
+      Each airline credit is in the original traveler’s name.</li>
+  <br>
+
+  <li>
+      Airline credits cannot be combined or transferred to another person.
+  </li>
+  <br>
+
+  <li>
+      Airline credits must be used for air travel, including taxes and fees, with the airline that originally issued the ticket.  
+  </li>
+  <br>
+
+  <li>
+      Airline credits cannot be used for ancillary services.
+  </li>
+  <br>
+  <li>
+
+      Airline credit comes with a travel-by date (sometimes called credit validity), so be sure to factor that into your planning. As soon as we confirm your credit validity date with our partner, we will communicate it to you via email.
+  </li>
+  <br>
+  <li>
+
+      For travel originally scheduled between March 19th and April 30th, we confirmed with our airline partner, that any applicable change fees would be waived.
+  </li>
+<br>
+
+
+</ul>
+
+<h3>Not affected by COVID-19? Here's the scoop on using your flight credit</h3>
+<br>
+<ul>
+<li>
+  Airline credit comes with a travel-by date, so be sure to factor that into your planning. (See your cancellation email for your specific ticket policies and details.)
+</li>
+<br>
+<li>
+  Airlines give separate credits to each traveler; you won’t be able to combine or transfer credits.
+</li>
+<br>
+<li>
+
+  This credit can be used only by the person whose name is on the ticket, and only with the airline that provided the credit.
+</li>
+<br>
+<li>
+
+  Your new flight must depart from the same country as was shown on your original ticket.
+</li>
+<br>
+<li>
+
+  If you choose a different destination when booking with an airline credit, some taxes may be forfeited, and new ones introduced. Bear in mind that this can impact the amount of your flight credit and how you can use it.
+</li>
+</ul>
+<br>
+
+
+All details of your airline credit, such as traveler name, credit amount, ticket number and expiration date, are in your confirmation email.
+How using your flight credit works <a href="#"> confirmation email.</a>
+<br>
+<br>
+
+<h3>How using your flight credit works</h3>
+<ol type="1">
+  <li>Find an eligible flight.</li>
+  <br>
+  <li>Find your original itinerary number and airline confirmation code in your flight confirmation email.</li>
+ <br>
+  <li>
+      Call us. At this time, flight credits can only be redeemed over the phone. A friendly agent will help you with your booking.</li>
+</ol>
+<br>
+                
+                </div>
+              
+              <br>
+              <h3>Was this topic helpful?</h3>
+<button style="width: 70px;">Yes</button>  <button style="width: 70px;">No</button>
+       <br><br>
+              </div>
+            </div>
+            <!-- <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    <h4 style="color:#9232ff;font-weight: bold;">Book a flight using an airline credit</h4> 
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    If you’ve had to cancel or change your 
+                    non-refundable flight, most airlines will 
+                    offer you a credit instead of a refund. 
+                    Here’s the things you should know. 
+                    <br>
+                    <br>
+<h3>Using your flight credit issued due to COVID-19</h3>
+<br>
+First, you will need to have the itinerary number, credit amount, and traveler name(s) handy to get started. Your flight credit can be used immediately. Currently, the only option to redeem a flight credit for future use, is by calling us. Given the high demand, we are prioritizing work on online solutions. We look forward to providing you an update here soon.  
+<br>
+<br>
+<h3>COVID-19 flight credit rules:</h3>
+<br>
+<ul>
+    <li> The airlines are setting the policies for how you can redeem your airline credit.
+        Each airline credit is in the original traveler’s name.</li>
+    <br>
+
+    <li>
+        Airline credits cannot be combined or transferred to another person.
+    </li>
+    <br>
+
+    <li>
+        Airline credits must be used for air travel, including taxes and fees, with the airline that originally issued the ticket.  
+    </li>
+    <br>
+
+    <li>
+        Airline credits cannot be used for ancillary services.
+    </li>
+    <br>
+    <li>
+
+        Airline credit comes with a travel-by date (sometimes called credit validity), so be sure to factor that into your planning. As soon as we confirm your credit validity date with our partner, we will communicate it to you via email.
+    </li>
+    <br>
+    <li>
+
+        For travel originally scheduled between March 19th and April 30th, we confirmed with our airline partner, that any applicable change fees would be waived.
+    </li>
+<br>
+
+
+</ul>
+
+<h3>Not affected by COVID-19? Here's the scoop on using your flight credit</h3>
+<br>
+<ul>
+  <li>
+    Airline credit comes with a travel-by date, so be sure to factor that into your planning. (See your cancellation email for your specific ticket policies and details.)
+  </li>
+  <br>
+  <li>
+    Airlines give separate credits to each traveler; you won’t be able to combine or transfer credits.
+  </li>
+  <br>
+  <li>
+
+    This credit can be used only by the person whose name is on the ticket, and only with the airline that provided the credit.
+  </li>
+  <br>
+  <li>
+
+    Your new flight must depart from the same country as was shown on your original ticket.
+  </li>
+  <br>
+  <li>
+
+    If you choose a different destination when booking with an airline credit, some taxes may be forfeited, and new ones introduced. Bear in mind that this can impact the amount of your flight credit and how you can use it.
+  </li>
+</ul>
+<br>
+
+
+All details of your airline credit, such as traveler name, credit amount, ticket number and expiration date, are in your confirmation email.
+How using your flight credit works <a href="#"> confirmation email.</a>
+<br>
+<br>
+
+<h3>How using your flight credit works</h3>
+<ol type="1">
+    <li>Find an eligible flight.</li>
+    <br>
+    <li>Find your original itinerary number and airline confirmation code in your flight confirmation email.</li>
+   <br>
+    <li>
+        Call us. At this time, flight credits can only be redeemed over the phone. A friendly agent will help you with your booking.</li>
+</ol>
+<br>
+<hr>
+<h3>Was this topic helpful?</h3>
+<button style="width: 70px;">Yes</button>  <button style="width: 70px;">No</button>
+<br><br>
+              </div>
+            </div>
+
+
+<hr> -->
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    <h4 style="color:#9232ff;font-weight: bold;">'Private host' listings</h4> 
+                  </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">When you browse our European Union (EU) websites and book a property that’s located in the EU/European Economic Area (EEA), it may be provided by a professional host (this is generally the case) or it may be provided by a private host.
+                    <br>
+                    <br>
+
+                    If you have a professional host, that means it’s their job to offer properties for booking — it’s part of their trade, business, or profession.
+                    <br>
+                    <br>
+                    If the property has told us they are a ‘private host,’ that means they’re offering a property for booking, but it’s not something they do as a trade, business, or profession. These kinds of properties are not subject to the same EU consumer protection rules that apply to professional hosts.
+                    <br>
+                    <br>
+                    ‘Private host’ properties are marked with a badge on their description page. Unbadged properties are provided by a professional host.</div>
+                
+                <br><hr>
+                <h3>Was this topic helpful?</h3>
+<button style="width: 70px;">Yes</button>  <button style="width: 70px;">No</button>
+         <br><br>
+                </div>
+              </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                    <h4 style="color:#9232ff;font-weight: bold;">Government travel alerts and warnings </h4> 
+                </button>
+              </h2>
+              <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+
+                    The government posts travel alerts and travel warnings for countries where travelers' health and safety may be at risk. When planning your trip, we recommend you check any relevant government sites before you <span style="font-weight: bold;">book your</span> travel.
+                <br>
+                <hr>
+                <h3>Was this topic helpful?</h3>
+                <button style="width: 70px;">Yes</button>  <button style="width: 70px;">No</button>
+                         <br><br>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                    <h4 style="color:#9232ff;font-weight: bold;">Online flight check-in </h4> 
+                  </button>
+                </h2>
+                <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <br>
+                    Online flight check-in opens 24-48 hours before your flight departure. You'll need your airline confirmation code (example: L84RTL) from your itinerary to check in.
+                <br>
+               <br>
+                <h3>Ready to check in ?</h3> 
+                <br>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Please select  an airline
+                    </button>
+                    <button type="button" class="btn btn-warning"><span style="color: 
+                        #060606;font-weight: bold;">Start Check-in</span></button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                      <li><a class="dropdown-item active" href="#">Air India</a></li>
+                      <li><a class="dropdown-item" href="#">Air china</a></li>
+                      <li><a class="dropdown-item" href="#">Air Italy</a></li>
+                      <li><a class="dropdown-item" href="#">Air New Zelanand </a></li>
+                      <li><a class="dropdown-item" href="#">Air sebria</a></li>
+                    </ul>
+                  </div>
+                  <br>
+                  <h3>Good to know</h3>
+                  <br>
+                  <ul>
+                    <li>
+                        Depending on your airline, after checking in online you may be able to print your boarding pass, save it to your mobile phone, or pick it up from a kiosk at the airport.
+                    </li>
+                    <br>
+                    <li>
+                        Airport check-in usually opens 2-3 hours before flight departure.
+                    </li>
+                    <br>
+                    <li>
+
+                        You will need your boarding pass to go through airport security. Check with your airline for any other required documents.
+                    </li>
+                    <br>
+                    <li>
+                        
+                     Plan to arrive at the airport at least 1-2 hours before your domestic flight, and at least 2-3 hours before your international flight.
+                    </li>
+                    <br>
+                    <li>
+
+                        To review your flight schedule and trip details, check your itinerary.
+                    </li>
+                    <br>
+                    <li>
+                        If you still need help checking in for your flight, contact us.
+                    </li>
+                  </ul>
+                  <br>
+                   <hr>
+                   <h3>Was this topic helpful?</h3>
+                   <button style="width: 70px;">Yes</button>  <button style="width: 70px;">No</button>
+                            <br><br>
+
+                </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                    <h4 style="color:#9232ff;font-weight: bold;">Earn Expedia Rewards tier status</h4> 
+                  </button>
+                </h2>
+                <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <h3>How it works</h3>
+
+                    Expedia Rewards members has 3 membership tiers:
+                    
+                    <ul>
+                        <li>
+                            When you join Expedia Rewards, you'll automatically earn Blue tier status.
+                        </li>
+                        <br>
+                        <li>
+                            Earn Silver status by collecting 10 Trip Elements in a calendar year
+                        </li>
+                        <br>
+                        <li>
+                            Earn Gold status by collecting 25 Trip Elements in a calendar year.
+                        </li>
+                        <br>
+                    </ul>
+                    Your status is valid from the day it is earned, for the following full calendar year, and expires on February 28 of the year after. For example, status earned in 2021 is valid from the day you earn it until February 28, 2023.
+                    <br>
+                    <h3>What is a Trip Element</h3>
+                    <br>
+                    Whether you’re booking an eligible flight, a night stay, an activity, or even car rental, it can all count as a Trip Element and can help you progress towards your next Expedia Rewards tier.
+                    <br>
+                    <h3>How it works</h3>
+                    Eligible travel for earning and using points may vary depending on your region. For specific information about your region, see Expedia Rewards.
+                    <br>
+                    <ul>
+                       <li>
+                        Flights – You earn one Trip Element per ticket (a roundtrip including stopover, a single flight, a leg of a multi-flight booking) where the booked flight itinerary is flown
+                       </li>
+                       <br>
+                       <li>
+                        Hotels – You earn one Trip Element per room per completed night stayed (regardless of the number of guests)
+                       </li>
+                       <br>
+                       <li>
+                        Accommodation Rental (may have multiple rooms) – You earn one Trip Element per completed night stayed
+                       </li>
+                       <br>
+                       <li>
+                        Car – You earn one Trip Element per completed car rental reservation
+                       </li>
+                       <br>
+                       <li>
+                        Activities – You earn one Trip Element per completed activity ticket booked
+                       </li>
+                       <br>
+                       <li>
+                        Package – You earn Trip Elements based on the rules for each travel type listed above
+                       </li>
+                       <br>
+                    </ul>
+                    
+                    <h3>Good to know</h3>
+                    <br>
+                    <ul>
+                        <li>Tier status is earned on a calendar year basis, from January 1 to December 31 and your qualification resets each year.</li>
+                       <br>
+                        <li>
+                            Trip Elements for a booking spanning two different years will be awarded in the respective years for room nights stayed or at the end of the trip for other types of bookings.
+                        </li><br>
+                        <li>
+                            You can earn Trip Elements for eligible bookings made with your Expedia Rewards account, regardless of who completes the travel.
+                        </li> <br>
+                        <li>
+                            Points and Trip Elements cannot be transferred to another Expedia Rewards account.
+                        </li><br>
+                        <li>
+                            Qualifying spend amounts include Expedia fees but not third-party taxes and fees.
+                        </li> <br>
+                        <li>
+                            Any claims for missing Trip Elements must be submitted within 180 days from travel end date. Contact us and be sure to provide the email address associated with your Expedia Rewards account and the itinerary number for which you have not received Trip Elements. We will review your request and credit your account for any approved claims.
+                        </li> <br>
+                        <li>
+                            For more information, read the <a href="#">Expedia Rewards Terms and Conditions. </a> 
+                        </li>
+                        <br>
+                    </ul>
+                    <h3>Was this topic helpful?</h3>
+                    <button style="width: 70px;">Yes</button>  <button style="width: 70px;">No</button>
+                             <br><br></div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                    <h4 style="color:#9232ff;font-weight: bold;">Earn and use your Expedia Rewards points</h4> 
+                  </button>
+                </h2>
+                <div id="flush-collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <br>
+                    Let's dig into earning points and saving cash with Expedia Rewards. Not enrolled yet? You can do that 
+                   <a href="#"> here.</a>
+                 <br>
+
+                  <h3> How to earn points</h3> <br>
+
+                    Earning points is simple – just sign in and book travel. Every time you book, you'll earn points. For more information about how many points you'll earn on your bookings, see Expedia Rewards.
+                    <br>
+                    Hot tip: Book on our mobile app and earn double points!
+                    <br>
+                    Want to see how many points you've earned? Just check your itinerary or hop over to your Account Activity page.
+                    <br>
+                   <h3>How to use points</h3> 
+                   <br>
+                    You've racked up points and want to use them – here's how that works:
+                    <br>
+                    <ol type="1">
+                        <li> Sign in and start the booking process.</li> <br>
+                        <li> At checkout, under payment, find Use my points.</li><br> 
+                     </ol>
+                   <br>
+
+                    We'll apply your entire balance to your total. Don't want to use all your points? Just enter in the amount you want to use. Using points toward a hotel? Be sure to choose Pay now at checkout. Pay later bookings aren't eligible.
+                     <br>
+                   <h3>Good to know</h3> 
+                   <ul>
+                    <li> Your points aren't transferable to another Expedia Rewards member, but you can redeem them for bookings in someone else's name.</li><br>
+                    <li>Points can't be transferred or redeemed for cash.</li><br>
+                    <li>Points can only be redeemed for a package coupon online and the coupons can only be applied to bookings made online. Expedia Rewards points can’t be redeemed for package coupons in Argentina, Hong Kong, South Korea, India or Vietnam. Customer service agents cannot apply your package coupon to any bookings made over the phone or via email.</li><br>
+                    <li>To request package coupons, log into your account and select Redeem for Packages under Ways to use your Expedia Rewards points.</li><br>
+                    <li>Coupons can be redeemed for bookings that are booked and travelled within 12 months of the coupon's issuance.</li><br>
+              
+                   </ul>
+                   <br>
+                   <hr>
+                   <h3>Was this topic helpful?</h3>
+                   <button style="width: 70px;">Yes</button>  <button style="width: 70px;">No</button>
+                            <br><br>
+                  
+               
+                </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                    <h4 style="color:#9232ff;font-weight: bold;">view and claim missing Expedia Rewards </h4> 
+                  </button>
+                </h2>
+                <div id="flush-collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <br>
+                    You're booking travel, earning points, and on your way to saving cash – great news! If you want to view your balance or find out what to do if you think points might be missing, you're in the right place. <br>
+                    <br> 
+                    <h3>How to view your balance</h3>
+             
+                     <ol type="1">
+                       <li><a href="#">Sign in</a></li>
+                      <br> <li>
+                        Choose Expedia Rewards. That's where you'll see your points balance and progress toward the next membership level.
+                       </li>
+                     </ol>
+                     <br><br>
+                     <h3>How to claim missing points</h3>
+                     Does your points balance seem off? Let's dig into that. First, know that there's a wait time between when you finish traveling and when your points show up in your <a href="#">Account Activity.</a> 
+                     <br>
+                       <h3>Here's when you should see your points:</h3><br>
+                       <ul>
+                        <li>30 days after completing your trip for flights, Pay now hotels, packages, and activities</li><br>
+                        <li>35 days after completing your trip for Pay later hotels</li><br>
+                    <li>Up to 90 days after completing your trip for cars</li>   
+                    </ul>  
+                    <br>
+                    Still don't see them? Contact us and we'll get to the bottom of it. Keep in mind that eligible travel for earning and using points may vary depending on your region. For specific information about your region, see Expedia Rewards.
+                    <br>
+                    <h3>Good to know</h3> 
+                    <ul>
+                     <li> Your points aren't transferable to another Expedia Rewards member, but you can redeem them for bookings in someone else's name.</li><br>
+                     <li>Points can't be transferred or redeemed for cash.</li><br>
+                     <li>Points can only be redeemed for a package coupon online and the coupons can only be applied to bookings made online. Expedia Rewards points can’t be redeemed for package coupons in Argentina, Hong Kong, South Korea, India or Vietnam. Customer service agents cannot apply your package coupon to any bookings made over the phone or via email.</li><br>
+                     <li>To request package coupons, log into your account and select Redeem for Packages under Ways to use your Expedia Rewards points.</li><br>
+                     <li>Coupons can be redeemed for bookings that are booked and travelled within 12 months of the coupon's issuance.</li><br>
+               
+                    </ul>
+                    <br>  
+                    <hr>
+                    <h3>Was this topic helpful?</h3>
+                    <button style="width: 70px;">Yes</button>  <button style="width: 70px;">No</button>
+                             <br><br>          
+                    </div>
+                </div>
+
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                    <h4 style="color:#9232ff;font-weight: bold;">Conditions of Carriage</h4> 
+                  </button>
+                </h2>
+                <div id="flush-collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    An airline's conditions of carriage provide you with detailed information on the conditions that oversee and direct its transportation, such as:
+                    <br>
+                    <ul>
+                        <li>
+                            Check-in and boarding gate deadlines
+                        </li> <br>
+                        <li>
+                            Fare rules and regulations
+                        </li><br>
+                        <li>
+                            Overbooking notices
+                        </li> <br>
+                        <li>
+                            Baggage liability limitations
+                        </li>
+                        <br>
+                        <li>
+                            Conditions of contract
+                        </li> <br>
+                    </ul>
+                    Select your airline from the menu below to see the airline's conditions of carriage:
+                <br><br>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="width: 350px;">
+                    please select an airline 
+                    </button>
+                    <button type="button" class="btn btn-warning"><span style="color: 
+                        #060606;font-weight: bold;">Go</span></button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item active" href="#">Air India</a></li>
+                        <li><a class="dropdown-item" href="#">Air china</a></li>
+                        <li><a class="dropdown-item" href="#">Air Italy</a></li>
+                        <li><a class="dropdown-item" href="#">Air New Zelanand </a></li>
+                        <li><a class="dropdown-item" href="#">Air sebria</a></li>
+                    </ul>
+                    <br>
+                    <hr>
+                    <h3>Was this topic helpful?</h3>
+                    <button style="width: 70px;">Yes</button>  <button style="width: 70px;">No</button>
+                             <br><br>   
+
+                  </div>
+                </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
+                    <h4 style="color:#9232ff;font-weight: bold;">What is Expedia Rewards</h4> 
+                  </button>
+                </h2>
+                <div id="flush-collapseTen" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    With Expedia Rewards, the more you travel, the more perks you get, like lower prices and points you can use to pay for future bookings. Sounds great, right?
+                    <br>
+                    To get started, go to Expedia Rewards and choose Join now for free.
+                    <br>
+                       <h3>How it works</h3> <br>
+                       You earn points when you book travel on eligible hotels, packages, cars, activities, and flights. And the more points you earn, the more you can use on future bookings and the higher your membership status. Eligible travel for earning and using points may vary depending on your region. For specific information about your region, see <a href="#"> Expedia Rewards.</a>
+                <br>
+                Expedia Rewards has 3 membership tiers: Blue, Silver, and Gold. The higher the level, the better the rewards -- you can learn about these perks and how to qualify for the higher levels in Earn Expedia Rewards tier status.
+                 <br>
+                 To view a complete list of benefits and perks, visit Expedia Rewards for more details.
+                <h3>Good to know</h3> 
+                <ul>
+                    <li>
+                        When you book a flight, you may still be able to earn your frequent flyer and credit card rewards points. This is in addition to any Expedia Rewards points you earn on eligible bookings!
+                    </li>
+                    <br>
+                </ul> 
+                <br>
+                For more information, read the  <a href="#">
+                    Expedia Rewards Terms and Conditions.
+                </a> 
+                <br>
+                <hr>
+                <h3>Was this topic helpful?</h3>
+                <button style="width: 70px;">Yes</button>  <button style="width: 70px;">No</button>
+                         <br><br>    
+                </div>
+                </div>
+              </div>
+
+          </div>
+
+    </div>
+
+    <!-- footer -->
+     
+    <div class="footer">
+      
+        <div class="title">
+          <h3>Subscribe Our Newsletter</h3>
+         </div>    
+
+         <div class="ipt-btn">
+          <input type="text" id="EInput"  placeholder="Enter your Email ID">
+          <button class="sbtn">Subscribe</button>
+         </div>
+      
+    
+
+       <div class="main-boxF">
+
+       <div class="boxF">
+
+        <div class="img">
+          <img src="./img/t logo.png" style="height: 180px;" alt="logo">
+        </div> 
+       <div class="location">
+         <p style="margin-left:-40px ;"> <i class="fa-solid fa-location-dot" style="margin-right: 20px;"></i>Bengaluru,India</p>
+      </div> <br>
+      <div class="call">
+
+<p style="margin-left: -80px;">
+  <i class="fa-solid fa-phone" style="margin-right:10px ;"></i>
+  9987 7645</p>
+      </div> <br>
+      <div class="gmail">
+ 
+        <p style="margin-left:15px ;"> <i class="fa-solid fa-envelope" style="margin-right:10px ;"></i>
+          travellers1@gmail.com</p>
+      </div>
+
+       </div>
+       <div class="boxF">
+          <div class="ul">
+            <ul>
+              <br>
+              <li>
+               <b>MY ACCOUNT</b>
+              </li><br>
+              <li>Search Term</li><br>
+              <li>Advanced Search</li> <br>
+              <li>Orders & Returns</li> <br>
+              <li>Helps & FAQ</li> <br>
+              <li>Stone Locations</li> 
+           </ul>
+          </div>
+             
+ 
+
+       </div>
+       <div class="boxF">
+        <div class="ul">
+          <ul>
+            <br>
+            <li>
+             <b>INFORMATION</b>
+            </li><br>
+            <li>News</li><br>
+            <li>FAQ</li> <br>
+            <li>Refund & Returns</li> <br>
+            <li>Delivery</li> <br>
+            <li>Privacy Policy</li> 
+         </ul>
+        </div>
+       </div>
+       <div class="boxF">
+        <div class="ul">
+          <ul>
+            <br>
+            <li>
+             <b>INFORMATION</b>
+            </li><br>
+            <li>Rock Climbing Gears</li><br>
+            <li>Solar Power Helmet</li> <br>
+            <li>Pull Rope Rubber</li> <br>
+            <li>Pairing Knief</li> <br>
+            <li>Ladder Golf</li> 
+         </ul>
+        </div>
+       </div>
+       </div>
+       <br> <br>
+       <div class="hr" style="
+       height: 4px;
+       width: 90%;
+       margin: auto;
+       background-color: rgb(229, 229, 229);
+       "></div>
+        <br>
+        <div class="media">
+          <span style="color: white;">
+            follow us on 
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+          </span>
+          <br><br>
+        </div>
+       
+
+
+
+    </div>
+
+
+
+
+
+
+    
+</body>
+</html>

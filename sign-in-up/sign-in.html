@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>signin Page</title>
+  
+    <style>
+        * {
+  box-sizing: border-box;
+}
+body {
+  background-image: url("https://iadsb.tmgrup.com.tr/e2a79f/1200/627/0/59/1000/580?u=https://idsb.tmgrup.com.tr/2019/09/27/1569603776449.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+div {
+  /* border: 1px solid; */
+  margin: auto;
+  text-align: center;
+  margin-bottom: 30px;
+}
+div > img {
+  width: 9%;
+}
+form {
+  width: 30%;
+  /* height: 400px; */
+  /* border: 1px solid; */
+  margin: auto;
+  /* padding-left: 20px; */
+  padding: 20px 0px 20px 40px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: rgba(255, 255, 255, 0.5); 
+  backdrop-filter: blur(.5px);
+  border-radius: 2%;
+}
+input {
+  padding: 10px;
+  width: 90%;
+  margin: 10px 0px;
+  border-color: rgb(236, 230, 230);
+}
+a {
+  color: rgb(40, 40, 238);
+}
+p,
+h1 {
+  text-align: center;
+  width: 90%;
+}
+#signin {
+  background-color: rgb(95, 95, 243);
+  color: white;
+}
+    </style>
+
+</head>
+  <body>
+    <div id="logo">
+      <img
+        src="logo-main.png"
+        alt="site-logo"
+      />
+    </div>
+    <form action="" id="form">
+      <h1>Login</h1>
+      <label for="email">Email</label>
+      <br />
+      <input type="email" id="email" placeholder="Enter email" required />
+      <br />
+      <label for="Password">Password</label>
+      <br />
+      <input type="text" id="password" placeholder="Enter password" required />
+      <br />
+      <input type="submit" name="" id="signin" />
+      <br />
+      <p>dont have an account <a href="signup.html">sign up</a></p>
+    </form>
+  </body>
+</html>
+<script>
+     let logo = document.getElementById("logo");
+    logo.addEventListener("click",()=>{
+        window.open("index.html");
+    })
+document.querySelector("#form").addEventListener("submit", signinfunc);
+function signinfunc(event) {
+  event.preventDefault();
+  let useremail = document.querySelector("#email").value;
+  let userpassword = document.querySelector("#password").value;
+  // console.log(useremail, typeof useremail);
+  // console.log(userpassword, typeof userpassword);
+  let x = localStorage.getItem("email");
+  let y = localStorage.getItem("password");
+  // console.log(x, typeof x);
+  // console.log(y, typeof y);
+  if (x === useremail && y === userpassword) {
+    alert("signin sucessfull");
+    window.open("index.html", "_self");
+  } else if (x != useremail && y != userpassword) {
+    alert("Wrong username & password");
+    useremail.innerText = "";
+    userpassword.innerText = "";
+    window.open("sign-in.html", "_self");
+  } else if (x != useremail) {
+    alert("Wrong username");
+    useremail.innerText = "";
+    userpassword.innerText = "";
+    window.open("sign-in.html", "_self");
+  } else {
+    alert("wrong passward");
+    useremail.innerText = "";
+    userpassword.innerText = "";
+    window.open("sign-in.html", "_self");
+  }
+  // window.location.href = "index.html";
+  // window.open("index.html", "_self");
+}
+</script>
