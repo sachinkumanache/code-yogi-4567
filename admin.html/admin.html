@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @keyframes slideInFromLeft {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      form#destination-form {
+        animation: 0.5s ease-out 0s 1 slideInFromLeft;
+      }
+
+      form#destination-form label,
+      form#destination-form input {
+        display: block;
+        margin-bottom: 10px;
+      }
+      .form-container {
+        width: 300px;
+        /* margin: 0 auto; */
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+
+      form#destination-form {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      form#destination-form input[type="text"] {
+        width: 52%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+      fieldset {
+        width: 32%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <form id="destination-form">
+        <label for="name">Name_Of_Place:</label>
+        <input type="" name="name" />
+
+        <label for="distance">Distance:</label>
+        <input type="text" id="distance" name="distance" required />
+
+        <label for="start-date">Start Date:</label>
+        <input type="date" id="start-date" name="start_date" required />
+
+        <label for="end-date">End Date:</label>
+        <input type="date" id="end-date" name="end_date" required />
+        <label for="image1">Image Link 1:</label>
+        <input type="url" id="image1" name="image1" required />
+
+        <label for="image2">Image Link 2:</label>
+        <input type="url" id="image2" name="image2" required />
+
+        <label for="image3">Image Link 3:</label>
+        <input type="url" id="image3" name="image3" required />
+
+        <label for="image4">Image Link 4:</label>
+        <input type="url" id="image4" name="image4" required />
+        <label for="price-per-night">Price per Night:</label>
+        <input
+          type="number"
+          id="price-per-night"
+          name="price_per_night"
+          required
+        />
+
+        <!-- <fieldset id="amenitiesFieldset">
+          <legend>Amenities:</legend>
+          <label
+            ><input type="checkbox" name="amenities" value="Free Wi-Fi" /> Free
+            Wi-Fi</label
+          >
+          <label
+            ><input type="checkbox" name="amenities" value="Swimming Pool" />
+            Swimming Pool</label
+          >
+          <label
+            ><input type="checkbox" name="amenities" value="Restaurant" />
+            Restaurant</label
+          >
+          <label
+            ><input type="checkbox" name="amenities" value="Spa" /> Spa</label
+          >
+        </fieldset> -->
+        <fieldset id="amenitiesFieldset">
+          <legend>Amenities:</legend>
+          <label
+            ><input type="checkbox" name="amenities" value="Free Wi-Fi" /> Free
+            Wi-Fi</label
+          >
+          <label
+            ><input type="checkbox" name="amenities" value="Swimming Pool" />
+            Swimming Pool</label
+          >
+          <label
+            ><input type="checkbox" name="amenities" value="Restaurant" />
+            Restaurant</label
+          >
+          <label
+            ><input type="checkbox" name="amenities" value="Spa" /> Spa</label
+          >
+        </fieldset>
+
+        <label for="rating">Rating:</label>
+        <input type="number" id="rating" name="rating" step="0.01" required />
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.querySelector("form#destination-form");
+
+      form.addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(event.target);
+        const data = {
+          name: formData.get("name").trim(),
+          images: [
+            formData.get("image1").trim(),
+            formData.get("image2").trim(),
+            formData.get("image3").trim(),
+            formData.get("image4").trim(),
+          ],
+          distance: formData.get("distance").trim(), // Assuming there is an input for distance
+          availability: {
+            start_date: formData.get("start_date").trim(),
+            end_date: formData.get("end_date").trim(),
+          },
+          price_per_night: parseFloat(formData.get("price_per_night").trim()),
+          amenities: [],
+          rating: parseFloat(formData.get("rating").trim()),
+        };
+
+        // Collect amenities
+        const amenitiesFieldset = document.getElementById("amenitiesFieldset");
+
+        // Get all checkboxes within the fieldset
+        const checkboxes = amenitiesFieldset.querySelectorAll(
+          'input[type="checkbox"]'
+        );
+
+        // Create an array to store selected amenities
+        const selectedAmenities = [];
+
+        // Loop through checkboxes to check if they are checked
+        checkboxes.forEach((checkbox) => {
+          if (checkbox.checked) {
+            // If checked, add the value to the array
+            data.amenities.push(checkbox.value);
+          }
+        });
+        console.log(data);
+
+        // POST the data to the API
+        fetch(`https://mock-api-template-y00o.onrender.com/locations`, {
+          method: "POST",
+          headers: {
+            "Content-type": "application/json",
+          },
+          body: JSON.stringify(data),
+        })
+          .then((response) => response.json())
+          .then((result) => console.log(result))
+          .catch((error) => console.error("Error:", error));
+      });
+    });
+  </script>
+</html>

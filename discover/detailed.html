@@ -61,8 +61,8 @@
         padding-right: 20px;
       }
       .cardDiv {
-        height: 100px;
-        border: 1px solid red;
+        /* height: 100px; */
+        /* border: 1px solid red; */
         display: grid;
         gap: 10px;
         grid-template-areas:
@@ -72,7 +72,9 @@
       }
       .cardDiv > div {
         width: 100%;
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
+        background-color: rgb(238, 220, 220);
+        border-radius: 10%;
       }
       .cardDiv > div:nth-child(1) {
         grid-area: a;
@@ -83,6 +85,49 @@
       .cardDiv > div:nth-child(3) {
         grid-area: c;
       }
+
+      .person {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .person > p {
+        margin: 5px;
+      }
+      select {
+        width: 80px;
+      }
+      .cardDiv > div:first-child {
+        text-align: center;
+      }
+      .cardDiv > div:nth-child(2) {
+        text-align: center;
+      }
+      .animated-card {
+          width: 35%;
+          /* border: 1px solid blue; */
+          padding: 20px;
+          padding-top: 200px;
+          margin-top: 20px;
+          animation: fadeInCard 1s ease-in-out;
+          transition: transform 1s ease-in-out;
+          background-color: #e3eaf4;
+        }
+
+        .animated-card:hover {
+          transform: translateY(-10px);
+        }
+
+        @keyframes fadeInCard {
+          from {
+            opacity: 0;
+            transform: translateY(300px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
     </style>
   </head>
   <body>
@@ -93,12 +138,27 @@
         <div class="t-img"></div>
         <!-- <div></div> -->
       </div>
-      <div class="card">
-        <h3>5000rs /neight</h3>
+      <!-- <div class="card">
+        <h3 class="price"></h3>
         <div class="cardDiv">
-          <div></div>
-          <div></div>
-          <div></div>
+          <div>
+            <p>CHECK IN DATE</p>
+            <strong class="checkin"></strong>
+          </div>
+          <div>
+            <p>CHECK OUT DATE</p>
+            <strong class="checkout"></strong>
+          </div>
+          <div class="person">
+            <p><strong>GUEST</strong></p>
+            <select name="" id="" class="guest-select">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
         </div>
 
         <button
@@ -108,13 +168,41 @@
         >
           Reserved
         </button>
-      </div>
+      </div> -->
+      
+
+      <div class="animated-card">
+        <h3 class="price">Price: $199</h3>
+        <div class="cardDiv">
+          <div>
+            <p>CHECK IN DATE</p>
+            <strong class="checkin">12th Dec 2023</strong>
+          </div>
+          <div>
+            <p>CHECK OUT DATE</p>
+            <strong class="checkout">15th Dec 2023</strong>
+          </div>
+          <div class="person">
+            <p><strong>GUEST</strong></p>
+            <select name="" id="" class="guest-select">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+        </div>
+        <button type="button" class="btn btn-outline-primary" style="width: 200px">
+          Reserved
+        </button>
+
     </div>
   </body>
 </html>
 <script>
   let data = JSON.parse(localStorage.getItem("location")) || null;
-  // console.log(data.images);
+  console.log(data);
   let f_img = document.querySelector(".f-img");
   let img = document.createElement("img");
   img.style.height = "100%";
@@ -135,4 +223,38 @@
   img3.style.width = "100%";
   img3.src = data.images[3];
   t_img.append(img3);
+
+  let price = document.querySelector(".price");
+  price.textContent = `price per neight ₹${data.price_per_night}`;
+
+  let checkin = document.querySelector(".checkin");
+  checkin.textContent = data.availability.start_date;
+
+  let checkout = document.querySelector(".checkout");
+  checkout.textContent = data.availability.end_date;
+
+  // Assuming there's a select element with class 'guest-select' to choose the number of guests
+  // and the price per night for one guest is already available in the 'data' object
+
+  let guestSelect = document.querySelector(".guest-select");
+  let pricePerGuest = data.price_per_night;
+ 
+
+
+
+  guestSelect.addEventListener("change", function () {
+    let numberOfGuests = parseInt(this.value);
+    var totalPrice = pricePerGuest * numberOfGuests;
+    price.textContent = `price per night ₹ ${totalPrice}`;
+  });
+
+
+ document.querySelector('.btn-outline-primary').addEventListener('click', function() {
+    const displayedPrice = document.querySelector('.price').textContent;
+    const priceValue = +displayedPrice.split('₹')[1].trim();
+    localStorage.setItem('selectedPrice', JSON.stringify(priceValue));
+    console.log(priceValue);
+            window.location.href = "/code-yogi-4567/discover/checkout.html";
+
+  });
 </script>
