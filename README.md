@@ -1,5 +1,6 @@
 # code-yogi-4567
-![favicon jpg](https://github.com/sachinkumanache/code-yogi-4567/assets/150121687/98eabf60-2bd5-4383-a764-21a359ccf58e)
+![logo-main](https://github.com/sachinkumanache/code-yogi-4567/assets/150121687/830d5bdd-9af5-4b21-9f00-cf754433fbc4)
+
 
 Members 
 1. Sachin Kumanache(Team lead).
