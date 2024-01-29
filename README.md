@@ -10,7 +10,7 @@ Members
 4. Bhawesh Pandey.
 
 # projects - (Travel & Tour)
-* code-yogi.netlify.app
+* [code-yogi.netlify.app](https://code-yogi.netlify.app/)
 ## Overview
 This project offers a collection of professional and customizable web components, including a responsive navbar, footer, carousel, and various body sections. Elevate our web development projects with these versatile components that enhance navigation, presentation, and overall user experience.
   
